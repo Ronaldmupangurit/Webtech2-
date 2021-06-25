@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Enquiries</title>
+<script>
+function display()
+{if( document.enquiries.name.value == "" ) 
+{alert( "Please provide your name!" );
+ document.enquiries.name.focus() ;
+ return false;}
+if( document.enquiries.number.value == "" )
+{alert( "Please provide your number!" );
+document.enquiries.number.focus() ;
+return false;}
+if( document.enquiries.email.value == "" )
+{alert( "Please provide your email address!" );
+document.enquiries.email.focus() ;
+return false;}
+if( document.enquiries.enquiry.value == "" )
+{alert( "Please provide your enquiry!" );
+  document.enquiries.enquiry.focus() ;
+return false;}
+alert("All Information Has Been Successfully Entered Correctly");
+document.getElementById("enquiries").reset();
+ return( true) }         
+</script>    
+</head>    
+<body>                 
+<h1>           
+Company Enquiries Form</Form:get>        
+</h1>        
+<form  name="enquiries" action="" method="post" id="enquiries">        
+<p><label for="name">Name:</label>         
+ <input type="text" name="name" required placeholder="Name">       </p>        
+<p><label for="phone number">Number:</label>             
+<input type="number" name="number" required placeholder="Cell Number">        </p>        
+<p>            <label for="email">Email:</label>            
+<input type="email" name="email" required placeholder="Email">        </p>        
+<p>           Enquiry: <br>           
+ <textarea name="enquiry" cols="30" rows="10" required></textarea>                    </p>                            
+<input type="button" value="SUBMIT" onclick="display();">                   
+ </form>	            
+</body>
+</html>
